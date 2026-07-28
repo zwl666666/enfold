@@ -1,0 +1,26 @@
+name: Move project page into docs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  organize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Move project page files
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p docs
+          git mv -- .nojekyll 404.html framework.png future-change.png generator-hierarchy.png generator-selectivity.png index.html interaction.jpg og.png real-robot.jpg recovery.jpg robots.txt sitemap.xml stability.png docs/
+          git rm -- .github/workflows/restructure-project-page.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Move project page into docs"
+          git push
