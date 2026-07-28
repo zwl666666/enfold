@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zwl666666.github.io/enfold/sitemap.xml
