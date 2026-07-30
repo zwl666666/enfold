@@ -51,8 +51,6 @@
 
 ## 演示
 
-使用播放器控件即可直接在 README 中播放视频。
-
 <table>
   <thead>
     <tr>
@@ -65,27 +63,27 @@
   <tbody>
     <tr>
       <td>Fold Tower</td>
-      <td><video src="https://github.com/user-attachments/assets/4c0a046a-ebc2-4bac-966f-bfef7ab51e4f" poster="./docs/posters/fold_tower.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://github.com/user-attachments/assets/8bced9fb-045f-4a64-9078-3b39b375cc4d" poster="./docs/posters/fold_tower_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://github.com/user-attachments/assets/99acc7fc-83ad-4c3f-84ab-f6f47a2e9488" poster="./docs/posters/fold_tower_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://github.com/user-attachments/assets/99acc7fc-83ad-4c3f-84ab-f6f47a2e9488" poster="./docs/posters/fold_tower.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://github.com/user-attachments/assets/4c0a046a-ebc2-4bac-966f-bfef7ab51e4f" poster="./docs/posters/fold_tower_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://github.com/user-attachments/assets/8bced9fb-045f-4a64-9078-3b39b375cc4d" poster="./docs/posters/fold_tower_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
     </tr>
     <tr>
       <td>Organize Desktop</td>
-      <td><video src="https://github.com/user-attachments/assets/fda84053-042b-40c7-a703-21c564f5bcef" poster="./docs/posters/organize_desktop.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://github.com/user-attachments/assets/8bdc4d62-13bc-40cf-bb4d-deb8f21a2508" poster="./docs/posters/organize_desktop_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://github.com/user-attachments/assets/93070c2d-2997-4d0f-a163-bb9699940a55" poster="./docs/posters/organize_desktop_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://github.com/user-attachments/assets/93070c2d-2997-4d0f-a163-bb9699940a55" poster="./docs/posters/organize_desktop.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://github.com/user-attachments/assets/fda84053-042b-40c7-a703-21c564f5bcef" poster="./docs/posters/organize_desktop_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://github.com/user-attachments/assets/8bdc4d62-13bc-40cf-bb4d-deb8f21a2508" poster="./docs/posters/organize_desktop_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
     </tr>
     <tr>
       <td>Spoon Powder</td>
-      <td><video src="https://github.com/user-attachments/assets/9cbea7ed-0933-41f9-a749-d673d0420b5c" poster="./docs/posters/spoon_powder.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://github.com/user-attachments/assets/a626c3f7-e5d3-46e9-8970-297c47338c5f" poster="./docs/posters/spoon_powder_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://github.com/user-attachments/assets/7bcdabc7-3807-4528-ad86-28ddee6bbf4d" poster="./docs/posters/spoon_powder_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://github.com/user-attachments/assets/7bcdabc7-3807-4528-ad86-28ddee6bbf4d" poster="./docs/posters/spoon_powder.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://github.com/user-attachments/assets/9cbea7ed-0933-41f9-a749-d673d0420b5c" poster="./docs/posters/spoon_powder_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://github.com/user-attachments/assets/a626c3f7-e5d3-46e9-8970-297c47338c5f" poster="./docs/posters/spoon_powder_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
     </tr>
     <tr>
       <td>Store Plate</td>
-      <td><video src="https://github.com/user-attachments/assets/d7c30386-a8f9-4a35-b9cf-9c72a775368f" poster="./docs/posters/store_plate.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://github.com/user-attachments/assets/d99246d4-b316-4a39-bbf6-6b94ba4dcd89" poster="./docs/posters/store_plate_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://github.com/user-attachments/assets/2a5a8afe-29a4-4eed-bcf9-df8ac739d044" poster="./docs/posters/store_plate_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://github.com/user-attachments/assets/2a5a8afe-29a4-4eed-bcf9-df8ac739d044" poster="./docs/posters/store_plate.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://github.com/user-attachments/assets/d7c30386-a8f9-4a35-b9cf-9c72a775368f" poster="./docs/posters/store_plate_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://github.com/user-attachments/assets/d99246d4-b316-4a39-bbf6-6b94ba4dcd89" poster="./docs/posters/store_plate_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
     </tr>
   </tbody>
 </table>
