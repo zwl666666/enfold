@@ -7,7 +7,7 @@ Official codebase for **Enfold: Folding World-Generator Computation into Predict
 
 [![arXiv](https://img.shields.io/badge/arXiv-2607.26657-b31b1b.svg)](https://arxiv.org/abs/2607.26657)
 [![Project Page](https://img.shields.io/badge/Project_Page-Enfold-2ea44f.svg)](https://zwl666666.github.io/enfold/)
-[![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-f7c843.svg)](HUGGINGFACE_MODEL_URL)
+[![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-f7c843.svg)](https://huggingface.co/richardxyt/Enfold)
 
 This repository contains the training and evaluation code for Enfold on LIBERO / RoboTwin.
 
@@ -311,6 +311,8 @@ bash eval.sh robotwin <checkpoint.pt> <dataset_stats.json> \
   MULTIRUN.num_gpus=8 MULTIRUN.max_tasks_per_gpu=1 \
   EVALUATION.replan_steps=24
 ```
+
+Evaluation metrics may vary with the simulation environment. We recommend trying different replan_steps values, such as 24 or 32.
 
 ## Acknowledgements
 

@@ -312,7 +312,7 @@ bash eval.sh robotwin <checkpoint.pt> <dataset_stats.json> \
   EVALUATION.replan_steps=24
 ```
 
-测试时受仿真环境影响指标可能有所不同，建议尝试不同的replan_steps（24或32）
+评测时受仿真环境影响指标可能有所不同，建议尝试不同的replan_steps（24或32）。
 
 ## 致谢
 
