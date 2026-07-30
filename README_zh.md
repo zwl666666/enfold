@@ -312,6 +312,8 @@ bash eval.sh robotwin <checkpoint.pt> <dataset_stats.json> \
   EVALUATION.replan_steps=24
 ```
 
+测试时受仿真环境影响指标可能有所不同，建议尝试不同的replan_steps（24或32）
+
 ## 致谢
 
 本工作建立在 [Fast-WAM](https://github.com/yuantianyuan01/FastWAM) 的基础上。我们也感谢 [Cosmos-Predict2.5](https://github.com/nvidia-cosmos/cosmos-predict2.5)、[RoboTwin](https://github.com/RoboTwin-Platform/RoboTwin)、[LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO) 和 [DINOv3](https://github.com/facebookresearch/dinov3) 团队公开相关工作。
