@@ -1,6 +1,7 @@
 # Runtime data and checkpoints
 data/
 checkpoints/
+checkpoints
 runs/
 outputs/
 evaluate_results/
