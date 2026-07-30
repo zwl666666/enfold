@@ -295,7 +295,7 @@ pip install huggingface-hub==0.36.0
 pip install torch==2.7.0+cu128 torchvision==0.22.0+cu128 \
   --extra-index-url https://download.pytorch.org/whl/cu128
 ```
-This repository contains only the RoboTwin evaluation integration and does not include the required assets. Download them according to the [official documentation](https://robotwin-platform.github.io/doc/usage/robotwin-install.html), place them under `third_party/Robotwin/assets`, and then create the following link:
+This repository contains only the RoboTwin evaluation integration and does not include the required assets. Download them according to the [official documentation](https://robotwin-platform.github.io/doc/usage/robotwin-install.html), place them under `third_party/RoboTwin/assets`, and then create the following link:
 
 ```bash
 ln -sfn "$(pwd)/experiments/robotwin/enfold_policy" \

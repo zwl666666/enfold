@@ -295,7 +295,7 @@ pip install huggingface-hub==0.36.0
 pip install torch==2.7.0+cu128 torchvision==0.22.0+cu128 \
   --extra-index-url https://download.pytorch.org/whl/cu128
 ```
-本仓库只包含 RoboTwin 的评测集成，不包含其所需要的 assets。需要先按照[官方文档](https://robotwin-platform.github.io/doc/usage/robotwin-install.html)进行下载并放到third_party/Robotwin/assets下，然后创建以下链接：
+本仓库只包含 RoboTwin 的评测集成，不包含其所需要的 assets。需要先按照[官方文档](https://robotwin-platform.github.io/doc/usage/robotwin-install.html)进行下载并放到third_party/RoboTwin/assets下，然后创建以下链接：
 
 ```bash
 ln -sfn "$(pwd)/experiments/robotwin/enfold_policy" \
