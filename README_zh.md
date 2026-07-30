@@ -1,6 +1,6 @@
 # Enfold
 
-Enfold: Folding World-Generator Computation into Predictive Representations for Efficient Embodied Control的官方代码仓库
+**Enfold: Folding World-Generator Computation into Predictive Representations for Efficient Embodied Control**的官方代码仓库
 
 [![English](https://img.shields.io/badge/README-English-111111.svg)](./README.md)
 [![中文](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-d14836.svg)](./README_zh.md)
