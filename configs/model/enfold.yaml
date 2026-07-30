@@ -1,0 +1,95 @@
+_target_: enfold.runtime.create_enfold_model
+
+model_id: checkpoints/81edfebe-bd6a-4039-8c1d-737df1a790bf_ema_bf16.pt
+tokenizer_model_id: ""
+tokenizer_max_len: 128
+load_text_encoder: false
+skip_dit_load_from_pretrain: false
+action_dit_pretrained_path: checkpoints/action_dit_cosmos_init.pt
+action_only_eval: false
+
+teacher_feature_layers: [7, 15, 23, 27]
+
+video_dit_config:
+  backend: cosmos
+  text_dim: 3584
+  cosmos:
+    repo_path: third_party/cosmos-predict2.5
+    model_name: 2B/post-trained
+    checkpoint_path: checkpoints/81edfebe-bd6a-4039-8c1d-737df1a790bf_ema_bf16.pt
+    tokenizer_vae_pth: checkpoints/tokenizer.pth
+    text_embedding_kind: auto
+    text_embedding_ckpt_path: checkpoints/Cosmos-Reason1-7B
+    text_embedding_name_or_path: checkpoints/Qwen2.5-VL-7B-Instruct
+    text_embedding_tokenizer_type: checkpoints/Qwen2.5-VL-7B-Instruct
+    text_embedding_concat_strategy: mean_pooling
+    student_text_pooling: mean_pooling
+    student_text_dim: 3584
+    context_len: 128
+    fps: 16
+    num_conditional_frames: 1
+    validate_infer_shape: false
+    load_ema_to_reg: true
+    enable_fsdp: false
+    seed: 0
+
+student_config:
+  model_id: checkpoints/dinov3-vith16plus
+  hidden_dim: 1024
+  text_dropout_prob: 0.1
+  text_projection_type: linear
+  text_concat_start_layer: 8
+  deep_supervision:
+    enabled: true
+    feature_layers: [7, 15, 23, 31]
+
+prediction_head_config:
+  hidden_dim: 1024
+  out_dim: 8192
+  condition_dim: 5120
+  ffn_dim: 4096
+  freq_dim: 256
+  eps: 1.0e-06
+  num_heads: 16
+  attn_head_dim: 64
+  num_layers: 10
+  max_seq_len: 4096
+  use_3d_rope: true
+  use_gradient_checkpointing: false
+
+action_head_config:
+  action_dim: ${data.train.processor.action_output_dim}
+  hidden_dim: 1024
+  ffn_dim: 4096
+  num_heads: 16
+  attn_head_dim: 64
+  num_layers: 10
+  text_dim: ${model.student_config.hidden_dim}
+  freq_dim: 256
+  eps: 1.0e-06
+  use_gradient_checkpointing: false
+
+video_scheduler:
+  train_shift: 5.0
+  infer_shift: 5.0
+  num_train_timesteps: 1000
+  train_time_distribution: logitnormal
+  train_time_weight: uniform
+
+action_scheduler:
+  train_shift: 5.0
+  infer_shift: 5.0
+  num_train_timesteps: 1000
+  uniform_sigma_sampling: false
+
+proprio_dim: ${data.train.processor.proprio_output_dim}
+
+repr_distillation:
+  exclude_conditional_frames: true
+  first_frame_weight: 1.0
+  other_frames_weight: 1.0
+
+loss:
+  lambda_video: 1.0
+  lambda_repr: 1.0
+  lambda_action: 1.0
