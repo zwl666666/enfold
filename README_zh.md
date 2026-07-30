@@ -20,17 +20,14 @@
 
 | 方法 | P.T. | 模型大小 | 延迟 (ms) | Long | Goal | Object | Spatial | 平均 |
 | --- | :---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| **主流视觉-语言-动作模型**   |
 | OpenVLA-OFT | ✓ | 7B | - | 94.5 | 97.9 | 98.4 | 97.6 | 97.1 |
 | π0 | ✓ | 3.5B | 184 | 88.4 | 94.4 | 96.8 | 98.0 | 94.4 |
 | π0.5 | ✓ | 3.5B | 184 | 92.4 | <u>98.0</u> | 98.2 | **98.8** | 96.9 |
 | GR00T-N1.6 | ✓ | 3.3B | 232 | 94.4 | 97.5 | 98.5 | 97.7 | 97.0 |
-| **基于潜在动作的方法**  |
 | LAPA | ✓ | 7B | - | 55.4 | 58.8 | 74.6 | 73.8 | 65.7 |
 | UniVLA | ✓ | 7B | - | 92.0 | 95.6 | 96.8 | 96.5 | 95.2 |
 | Mantis | ✓ | 5.8B | - | 94.2 | 94.4 | 99.2 | **98.8** | 96.7 |
 | VLA-JEPA | ✗ | 3B | - | 95.8 | 97.2 | 99.6 | 96.2 | 97.2 |
-| **世界动作模型**  |
 | F1 | ✗ | 4B | 352 | 91.3 | 95.4 | 97.8 | 98.2 | 95.7 |
 | Motus | ✗ | 8B | 2759 | <u>97.6</u> | 96.6 | <u>99.8</u> | 96.8 | 97.7 |
 | Cosmos-Policy | ✗ | 2.1B | 1133 | <u>97.6</u> | **98.2** | **100.0** | 98.1 | **98.5** |
@@ -68,27 +65,27 @@
   <tbody>
     <tr>
       <td>Fold Tower</td>
-      <td><video src="https://raw.githubusercontent.com/zwl666666/enfold/main/docs/videos/fold_tower.mp4" poster="./docs/posters/fold_tower.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://raw.githubusercontent.com/zwl666666/enfold/main/docs/videos/fold_tower_ood.mp4" poster="./docs/posters/fold_tower_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://raw.githubusercontent.com/zwl666666/enfold/main/docs/videos/fold_tower_perturbation.mp4" poster="./docs/posters/fold_tower_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://zwl666666.github.io/enfold/videos/fold_tower.mp4" poster="https://zwl666666.github.io/enfold/posters/fold_tower.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://zwl666666.github.io/enfold/videos/fold_tower_ood.mp4" poster="https://zwl666666.github.io/enfold/posters/fold_tower_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://zwl666666.github.io/enfold/videos/fold_tower_perturbation.mp4" poster="https://zwl666666.github.io/enfold/posters/fold_tower_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
     </tr>
     <tr>
       <td>Organize Desktop</td>
-      <td><video src="https://raw.githubusercontent.com/zwl666666/enfold/main/docs/videos/organize_desktop.mp4" poster="./docs/posters/organize_desktop.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://raw.githubusercontent.com/zwl666666/enfold/main/docs/videos/organize_desktop_ood.mp4" poster="./docs/posters/organize_desktop_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://raw.githubusercontent.com/zwl666666/enfold/main/docs/videos/organize_desktop_perturbation.mp4" poster="./docs/posters/organize_desktop_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://zwl666666.github.io/enfold/videos/organize_desktop.mp4" poster="https://zwl666666.github.io/enfold/posters/organize_desktop.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://zwl666666.github.io/enfold/videos/organize_desktop_ood.mp4" poster="https://zwl666666.github.io/enfold/posters/organize_desktop_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://zwl666666.github.io/enfold/videos/organize_desktop_perturbation.mp4" poster="https://zwl666666.github.io/enfold/posters/organize_desktop_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
     </tr>
     <tr>
       <td>Spoon Powder</td>
-      <td><video src="https://raw.githubusercontent.com/zwl666666/enfold/main/docs/videos/spoon_powder.mp4" poster="./docs/posters/spoon_powder.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://raw.githubusercontent.com/zwl666666/enfold/main/docs/videos/spoon_powder_ood.mp4" poster="./docs/posters/spoon_powder_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://raw.githubusercontent.com/zwl666666/enfold/main/docs/videos/spoon_powder_perturbation.mp4" poster="./docs/posters/spoon_powder_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://zwl666666.github.io/enfold/videos/spoon_powder.mp4" poster="https://zwl666666.github.io/enfold/posters/spoon_powder.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://zwl666666.github.io/enfold/videos/spoon_powder_ood.mp4" poster="https://zwl666666.github.io/enfold/posters/spoon_powder_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://zwl666666.github.io/enfold/videos/spoon_powder_perturbation.mp4" poster="https://zwl666666.github.io/enfold/posters/spoon_powder_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
     </tr>
     <tr>
       <td>Store Plate</td>
-      <td><video src="https://raw.githubusercontent.com/zwl666666/enfold/main/docs/videos/store_plate.mp4" poster="./docs/posters/store_plate.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://raw.githubusercontent.com/zwl666666/enfold/main/docs/videos/store_plate_ood.mp4" poster="./docs/posters/store_plate_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
-      <td><video src="https://raw.githubusercontent.com/zwl666666/enfold/main/docs/videos/store_plate_perturbation.mp4" poster="./docs/posters/store_plate_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://zwl666666.github.io/enfold/videos/store_plate.mp4" poster="https://zwl666666.github.io/enfold/posters/store_plate.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://zwl666666.github.io/enfold/videos/store_plate_ood.mp4" poster="https://zwl666666.github.io/enfold/posters/store_plate_ood.jpg" width="220" controls preload="metadata" playsinline></video></td>
+      <td><video src="https://zwl666666.github.io/enfold/videos/store_plate_perturbation.mp4" poster="https://zwl666666.github.io/enfold/posters/store_plate_perturbation.jpg" width="220" controls preload="metadata" playsinline></video></td>
     </tr>
   </tbody>
 </table>
