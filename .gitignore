@@ -1,0 +1,61 @@
+# Runtime data and checkpoints
+data/
+checkpoints/
+checkpoints
+runs/
+outputs/
+evaluate_results/
+wandb/
+
+# RoboTwin local installation links
+third_party/RoboTwin/assets
+third_party/RoboTwin/checkpoints
+third_party/RoboTwin/policy/enfold_policy
+
+# Generated model artifacts
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+*.trt
+*.engine
+*.plan
+*.jit
+
+# Logs, reports, and local indexes
+*.log
+*.pdf
+*.db
+.codegraph/
+.deepspeed*
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Editors and OS files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Credentials and local configuration
+.env
+credentials/
+*.secret
+
+# Temporary files
+*.tmp
+*.locks*
+*.no_exist*
+*models--t5*
