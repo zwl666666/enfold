@@ -36,7 +36,7 @@ video_dit_config:
 student_config:
   model_id: checkpoints/dinov3-vith16plus
   hidden_dim: 1024
-  text_dropout_prob: 0.1
+  text_dropout_prob: 0
   text_projection_type: linear
   text_concat_start_layer: 8
   deep_supervision:
