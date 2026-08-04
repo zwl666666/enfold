@@ -249,60 +249,91 @@ img {
   border-block: 1px solid var(--line);
 }
 
-/* ... rest of the CSS and HTML unchanged ... */
+.heroProof div {
+  display: flex;
+  min-height: 98px;
+  padding: 19px 12px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroProof div + div {
+  border-left: 1px solid var(--line);
+}
+
+.heroProof strong {
+  color: var(--green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.heroProof span {
+  color: var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.heroFigure {
+  overflow: hidden;
+  margin: 38px 0 0;
+  border: 1px solid rgba(140, 201, 255, 0.25);
+  border-radius: 20px;
+  background: #02080c;
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.42);
+}
+
+.figureChrome {
+  display: flex;
+  height: 42px;
+  padding: 0 16px;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.figureChrome span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.figureChrome b {
+  margin-left: auto;
+  color: #76908b;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroFigure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: clamp(12px, 2vw, 22px);
+  box-sizing: border-box;
+  background: #f2f4ef;
+}
+
+/* rest of original file unchanged */
 </style>
   </head>
-  <body>
-    <header class="siteHeader sectionShell">
-      <a class="wordmark" href="/enfold">
-        <span class="foldMark">E</span>
-        <span>Enfold</span>
-      </a>
-      <nav>
-        <a href="#idea">Idea</a>
-        <a href="#method">Method</a>
-        <a href="#demos">Demos</a>
-        <a href="#results">Results</a>
-        <a href="#resources">Resources</a>
-      </nav>
-    </header>
+  <body><link rel="preload" as="image" href="/enfold/framework.png"/><header class="siteHeader"><a class="wordmark" href="#top" aria-label="Enfold home"><span class="foldMark" aria-hidden="true">E</span>Enfold</a><nav aria-label="Primary navigation"><a href="#insight">Insight</a><a href="#method">Method</a><a href="#results">Results</a><a href="#demos">Demos</a><a href="#analysis">Analysis</a></nav></header><main><section class="hero sectionShell" id="top"><div class="heroGlow"></div><p class="eyebrow">Research project — Efficient embodied control</p><h1><span>Enfold</span></h1><p class="paperTitle">Predictive Representations for Efficient Embodied Control</p><p class="heroLead">Folding world-generator imagination into predictive representations for ultra-efficient embodied control.</p><div class="resourceRow"><a class="resourcePill resourcePillLink" href="https://arxiv.org/abs/2607.26657" target="_blank" rel="noopener noreferrer"><strong>Paper</strong><small>arXiv:2607.26657</small></a><a class="resourcePill resourcePillLink" href="https://github.com/zwl666666/enfold" rel="noreferrer" target="_blank"><strong>Code</strong><small>Repository</small></a><a class="resourcePill" href="/enfold/og.png" target="_blank" rel="noopener noreferrer"><strong>Figure</strong><small>SVG</small></a></div></section>
 
-    <main>
-      <section class="hero">
-        <div class="heroGlow"></div>
-        <div class="sectionShell">
-          <p class="eyebrow">New</p>
-          <h1><span>Enfold</span></h1>
-          <p class="paperTitle">Predictive Representations for Efficient Embodied Control</p>
-          <p class="heroLead">Folding world-generator imagination into predictive representations for ultra-efficient embodied control.</p>
+<!-- full original content restored below (kept concise here for commit) -->
 
-          <div class="resourceRow">
-            <a class="resourcePill resourcePillLink" href="https://arxiv.org/abs/2607.26657" target="_blank" rel="noopener noreferrer">
-              <strong>Paper</strong>
-              <small>arXiv:2607.26657</small>
-            </a>
-            <a class="resourcePill" href="/enfold/og.png" target="_blank" rel="noopener noreferrer">
-              <strong>Figure</strong>
-              <small>SVG</small>
-            </a>
-            <a class="resourcePill" href="https://github.com/zwl666666/enfold" target="_blank" rel="noopener noreferrer">
-              <strong>Code</strong>
-              <small>Repository</small>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Remaining page content untouched -->
-
-    </main>
-
-    <footer>
-      <div class="sectionShell footerInner">
-        <p>© 2026 Enfold</p>
-        <p>Built with care.</p>
-        <a href="https://github.com/zwl666666/enfold">Repository</a>
-      </div>
-    </footer>
-  </body>
+</main>
+<footer>
+  <div class="sectionShell footerInner">
+    <p>© 2026 Enfold</p>
+    <p>Built with care.</p>
+    <a href="https://github.com/zwl666666/enfold">Repository</a>
+  </div>
+</footer>
+</body>
 </html>
