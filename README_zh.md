@@ -391,8 +391,43 @@ bash eval.sh robotwin <checkpoint.pt> <dataset_stats.json> \
 
 评测时受仿真环境影响指标可能有所不同，建议尝试不同的replan_steps（24或32）。
 
+#### TensorRT 导出与加速推理（以 RoboTwin 为例）
+
+我们提供了 TensorRT 导出脚本，可将 Action 和 Student 模块分别导出为 ONNX 模型，并进一步构建对应的 TensorRT engine。具体命令如下：
+
+```bash
+python scripts/export_robotwin_dino_student_action_onnx.py \
+  --ckpt <checkpoint.pt> \
+  --task <task_config> \
+  --action-onnx outputs/action.onnx \
+  --student-onnx outputs/student.onnx \
+  --action-engine outputs/action.trt \
+  --student-engine outputs/student.trt \
+  --action-horizon 32
+```
+
+导出完成后，在 RoboTwin 评测命令中指定 TensorRT engine 路径即可启用 TensorRT 推理：
+
+```bash
+bash eval.sh robotwin <checkpoint.pt> <dataset_stats.json> \
+  MULTIRUN.num_gpus=8 MULTIRUN.max_tasks_per_gpu=1 \
+  EVALUATION.replan_steps=24 \
+  +EVALUATION.action_trt_path=outputs/action.trt \
+  +EVALUATION.student_trt_path=outputs/student.trt
+```
+
 ## 致谢
 
 本工作建立在 [Fast-WAM](https://github.com/yuantianyuan01/FastWAM) 的基础上。我们也感谢 [Cosmos-Predict2.5](https://github.com/nvidia-cosmos/cosmos-predict2.5)、[RoboTwin](https://github.com/RoboTwin-Platform/RoboTwin)、[LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO) 和 [DINOv3](https://github.com/facebookresearch/dinov3) 团队公开相关工作。
 
 ## BibTeX
+如果你觉得我们的工作有帮助，欢迎引用：
+
+```bibtex
+@article{zeng2026enfold,
+  title={Enfold: Folding World-Generator Computation into Predictive Representations for Efficient Embodied Control},
+  author={Zeng, Weili and Xing, Yitong and Liu, Fulong and Yang, Chengqun and Xiang, Antao and Tian, Feng and Gao, Jingnan and Cai, Jisong and Wang, Xin and Wu, Xiaomin and others},
+  journal={arXiv preprint arXiv:2607.26657},
+  year={2026}
+}
+```

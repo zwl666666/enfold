@@ -391,8 +391,43 @@ bash eval.sh robotwin <checkpoint.pt> <dataset_stats.json> \
 
 Evaluation metrics may vary with the simulation environment. We recommend trying different replan_steps values, such as 24 or 32.
 
+#### TensorRT Export and Accelerated Inference (RoboTwin Example)
+
+We provide a TensorRT export script that exports the Action and Student modules to ONNX models and then builds the corresponding TensorRT engines. The command is as follows:
+
+```bash
+python scripts/export_robotwin_dino_student_action_onnx.py \
+  --ckpt <checkpoint.pt> \
+  --task <task_config> \
+  --action-onnx outputs/action.onnx \
+  --student-onnx outputs/student.onnx \
+  --action-engine outputs/action.trt \
+  --student-engine outputs/student.trt \
+  --action-horizon 32
+```
+
+After export, enable TensorRT inference by providing the engine paths during RoboTwin evaluation:
+
+```bash
+bash eval.sh robotwin <checkpoint.pt> <dataset_stats.json> \
+  MULTIRUN.num_gpus=8 MULTIRUN.max_tasks_per_gpu=1 \
+  EVALUATION.replan_steps=24 \
+  +EVALUATION.action_trt_path=outputs/action.trt \
+  +EVALUATION.student_trt_path=outputs/student.trt
+```
+
 ## Acknowledgements
 
 This work builds on [Fast-WAM](https://github.com/yuantianyuan01/FastWAM). We also thank the teams behind [Cosmos-Predict2.5](https://github.com/nvidia-cosmos/cosmos-predict2.5), [RoboTwin](https://github.com/RoboTwin-Platform/RoboTwin), [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO), and [DINOv3](https://github.com/facebookresearch/dinov3) for their open-source work.
 
 ## BibTeX
+If you find our work helpful, please consider citing:：
+
+```bibtex
+@article{zeng2026enfold,
+  title={Enfold: Folding World-Generator Computation into Predictive Representations for Efficient Embodied Control},
+  author={Zeng, Weili and Xing, Yitong and Liu, Fulong and Yang, Chengqun and Xiang, Antao and Tian, Feng and Gao, Jingnan and Cai, Jisong and Wang, Xin and Wu, Xiaomin and others},
+  journal={arXiv preprint arXiv:2607.26657},
+  year={2026}
+}
+```
