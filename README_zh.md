@@ -1,6 +1,6 @@
 # Enfold
 
-**Enfold: Folding World-Generator Computation into Predictive Representations for Efficient Embodied Control**的官方代码仓库
+**Enfold: Folding World Model Imagination into Predictive Representations for Ultra-Efficient Embodied Control**的官方代码仓库
 
 <p align="center">
   <img src="./docs/framework.png" alt="Enfold 框架图" width="100%">
@@ -424,10 +424,13 @@ bash eval.sh robotwin <checkpoint.pt> <dataset_stats.json> \
 如果你觉得我们的工作有帮助，欢迎引用：
 
 ```bibtex
-@article{zeng2026enfold,
-  title={Enfold: Folding World-Generator Computation into Predictive Representations for Efficient Embodied Control},
-  author={Zeng, Weili and Xing, Yitong and Liu, Fulong and Yang, Chengqun and Xiang, Antao and Tian, Feng and Gao, Jingnan and Cai, Jisong and Wang, Xin and Wu, Xiaomin and others},
-  journal={arXiv preprint arXiv:2607.26657},
-  year={2026}
+@misc{zeng2026enfoldfoldingworldmodel,
+  title={Enfold: Folding World Model Imagination into Predictive Representations for Ultra-Efficient Embodied Control}, 
+  author={Weili Zeng and Yitong Xing and Fulong Liu and Chengqun Yang and Antao Xiang and Feng Tian and Jingnan Gao and Jisong Cai and Xin Wang and Xiaomin Wu and Yao Mu and Xiaokang Yang and Yichao Yan},
+  year={2026},
+  eprint={2607.26657},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2607.26657}, 
 }
 ```
